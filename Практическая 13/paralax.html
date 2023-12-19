@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 150vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="parallax" style="background-image: url('img/forest.jpg');"></div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let scrollPosition = window.pageYOffset;
+    parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px'; // Измените коэффициент, чтобы настроить скорость параллакса
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="link">
+        <a href="https://t.me/rk4ir_0122/99" onclick="return confirm('Ты точно этого хочешь?')"><p><b>Рискни здоровьем</b></p></a>
+    </div>
+
+    <div class="container">
+        <div class="main"><img src="img/first.jpg" width="1100px" height="600px"></div>
+        <div class="galery">
+            <img src="img/first.jpg" width="200px" height="100px" onclick="Change(this)">
+            <img src="img/second.jpg" width="200px" height="100px" onclick="Change(this)">
+            <img src="img/third.jpg" width="200px" height="100px" onclick="Change(this)">
+            <img src="img/fourth.jpg" width="200px" height="100px" onclick="Change(this)">
+            <img src="img/fifth.jpg" width="200px" height="100px"  onclick="Change(this)">
+        </div>
+    </div>
+
+    <ul id="selectableList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
+
+    <ul class="list">
+        <li class="item" id="item1" draggable="true" cost="10"><p>Товар 1 <br>Цена 10</p></li>
+        <li class="item" id="item2" draggable="true" cost="20"><p>Товар 2 <br>Цена 20</p></li>
+        <li class="item" id="item3" draggable="true" cost="30"><p>Товар 3 <br>Цена 30</p></li>
+        <li class="item" id="item4" draggable="true" cost="40"><p>Товар 4 <br>Цена 40</p></li>
+        <li class="item" id="item5" draggable="true" cost="50"><p>Товар 5 <br>Цена 50</p></li>
+        <li class="item" id="item6" draggable="true" cost="60"><p>Товар 6 <br>Цена 60</p></li>
+    </ul>
+
+    <div class="square"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="dragon.js"></script>
+    <script>
+        window.onload = function(){
+            function value(x, y){
+                return (x + (Math.random() * (y - x)))
+            }
+            var object = " ";
+            for (var i = 0; i < 100; i++){
+                var a = value(2, 30);
+                object += '<div class="object" style="height:'+a+'px; width: '+a+'px; background-color: rgba('+value(0, 300)+', '+value(0, 300)+', '+value(0, 300)+'); animation-duration'+value(10, 30)+'s; top: '+value(0, 100)+'%; left: '+value(0, 100)+'%; z-index: -1;"></div>'
+            }
+
+            $('body').append(object);
+        };
+    </script>
+</body>

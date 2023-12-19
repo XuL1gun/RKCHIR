@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+header h1 {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Niconne', cursive;
+  color: #e0d6e9;
+  text-shadow: 2px 2px 0px  #957dad,
+               4px 4px 0px #ee4b2b,
+               6px 6px 0px #00c2cb,
+               8px 8px 0px #ff7f50,
+               10px 10px 0px #553c9a;
+}
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    color:#7e619c; 
+}
+
+nav > ol{
+    font-style: Verdana;
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+section pre{
+    font-size: x-large;
+}
+
+.inform{
+    text-align: justify;
+}
+
+.leftphoto{
+    float: right;
+    padding: 10px, 20px;
+    margin: 0px 20px;
+}
+
+#Third{
+    text-align: center;
+}
+
+a:hover{
+    color: black;
+    background-color: burlywood;
+}
+
+a:visited {
+    color: rgb(97, 97, 207);
+  }
+
+ a:active {
+    color: red;
+  }
+
+aside {
+    width: 10%;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+  }
+  

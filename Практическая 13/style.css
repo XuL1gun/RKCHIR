@@ -1,0 +1,150 @@
+::-webkit-scrollbar{
+    width: 3px;
+  }
+
+.base {
+    height: 100px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    background-color: #66ffcc;
+}
+
+.indicator {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 60%;
+    bottom: 60%;
+    background-color: brown;
+    border: 3px solid rgb(51, 51, 51);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noti_count {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.base:hover{
+    animation: shapeChange 0.5s forwards;
+}
+
+@keyframes shapeChange {
+    0% {
+      border-radius: 50%; /* начальная форма: круг */
+      height: 100px;
+      width: 100px;
+    }
+    100% {
+      border-radius: 10%; /* конечная форма: прямоугольник */
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .base:hover .indicator{
+    animation: Change 0.5s forwards;
+}
+
+@keyframes Change {
+    0% {
+        left: 60%;
+        bottom: 60%;
+    }
+    100% {
+        left: 80%;
+        bottom: 80%;
+    }
+  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content #Number {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.close{
+  background-color: grey;
+  position: absolute;
+  left: 85%;
+  bottom: 53%;
+  border-radius: 50%;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content #Number:hover {
+  background-color: #66ffcc;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.base:hover .dropdown-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  bottom: 0px;
+  top: 20%;
+  overflow-y: scroll;
+}
+
+.list-container{
+    background-color: #66ffcc;
+}
+
+.list-container {
+    width: 30%;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.544); 
+    background-color: #66ffcc;
+  }
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+
+  #notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    background: rgba(236, 7, 7, 0.7);
+  }
+
+  .container{
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    background: #66ffcc;
+  }

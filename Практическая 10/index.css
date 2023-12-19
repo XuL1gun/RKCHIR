@@ -1,0 +1,28 @@
+.cards{
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #33f429;
+    }
+    .cards p{
+    color: #ffff;
+    }
+    
+    .busket{
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #33f429;
+    }

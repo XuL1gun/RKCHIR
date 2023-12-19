@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(41, 16, 122);
+}
+
+.conteiner{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 200px);
+    justify-items: stretch;
+}
+
+.box{
+    position: relative;
+    width: initial;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 400%;
+    background: linear-gradient(#00ccff, #d400d4);
+    animation: animate 4s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background:  rgb(18, 7, 55);
+    border-radius: 16px;
+}
+
+.box:hover::after{
+    inset: 4px;
+}
+
+.conteiner:hover .box{
+    opacity: 0.5;
+}
+
+.conteiner:hover .box:hover{
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box h2{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 10;
+}
+
+.box:hover ~ .box{ 
+    opacity: 0.5;
+}
+
+#item1{
+    grid-column: 1/span 2;
+}
+#item2{
+    grid-column: 3;
+    grid-row: 1/span 2;
+}
+
+#item4{
+    grid-column: 1;
+    grid-row: 2/span 2;
+}
+
+#item7{
+    grid-column: 2/ span 3;
+    grid-row: 3;
+}
